@@ -80,7 +80,7 @@ const Detail: FC = () => {
 
       {isHover && (
         <div className="bottom-[400px] right-[800px] duration-200 fixed">
-          <img className="fixed" src="/images/Kitty.png" alt="kitty" />
+          <img className="fixed" src="/images/kitty.png" alt="kitty" />
         </div>
       )}
     </div>
