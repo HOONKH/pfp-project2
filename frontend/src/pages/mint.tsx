@@ -85,7 +85,7 @@ const Mint: FC = () => {
         alt="background"
       />
       <div className="h-28"></div>
-      <div className="min-h-screen grow mx-auto max-w-screen-xl bg-[##211d29] grid grid-cols-2 justify-items-center pt-10 shadow-inner shadow-slate-400 text-white ">
+      <div className="min-h-screen grow mx-auto max-w-screen-xl rounded-t-md bg-[##211d29] grid grid-cols-2 justify-items-center pt-10 shadow-inner shadow-slate-400 text-white ">
         {metadataArray?.map((v, i) => (
           <NftCard key={i} image={v.image} name={v.name} tokenId={v.tokenId!} />
         ))}
