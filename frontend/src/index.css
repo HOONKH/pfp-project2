@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "crang";
+  src: url(./fonts/Crang.ttf);
+}
+@font-face {
+  font-family: "smash";
+  src: url(./fonts/Super\ Smash\ TV.ttf);
+}
+
+.crang {
+  @apply font-["crang"];
+}
+.textcolor {
+  @apply text-[#DBDBDB];
+}
+
+.modalbutton {
+  @apply border-2 border-none shadow-inner shadow-slate-400 rounded-lg py-2 px-2 hover:shadow-slate-200;
+}
+
+.smash {
+  @apply font-["smash"];
+}
+
+.background {
+  @apply fixed left-0 top-0 w-full h-full -z-10 object-fill;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  background: transparent
+    radial-gradient(
+      at calc(var(--mouse-x, 0) * 100%) calc(var(--mouse-y, 0) * 100%),
+      white,
+      black
+    );
+}
