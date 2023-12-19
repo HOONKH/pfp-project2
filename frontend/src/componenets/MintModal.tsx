@@ -46,6 +46,7 @@ const MintModal: FC<ImintModalProps> = ({
       setMetadataArray([response.data, ...metadataArray]);
       setIsLoading(false);
       setIsOpen(false);
+      alert("민팅이 완료되었습니다!");
     } catch (error) {
       console.error(error);
       setIsLoading(false);

@@ -90,12 +90,12 @@ const MyNftCard: FC<ImyNftCard> = ({ name, image, tokenId }) => {
         <div className="text-right text-3xl">{registedPrice} ETH</div>
       ) : (
         <form
-          onClick={onSubmitSale}
+          onSubmit={onSubmitSale}
           className="text-right text-2xl mt-2 text-black"
         >
           <input
             placeholder=" Value"
-            className="border-2 border-none rounded-md mx-2 hover:slate-200 "
+            className="border-2 border-none rounded-md mx-2 hover:bg-slate-200 "
             type="text"
             value={price}
             onChange={(e) => setPrice(e.target.value)}

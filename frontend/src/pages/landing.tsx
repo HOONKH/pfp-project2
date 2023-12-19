@@ -25,7 +25,7 @@ const Landing: FC = () => {
         </div>
         <ul className="">
           <button
-            className="border-2 smash text-4xl bg-white border-none text-black rounded-lg shadow-inner shadow-slate-600 py-2 px-2 mt-2 font-bold hover:scale-110 hover:bg-slate-200 duration-200 "
+            className="border-2 smash text-4xl bg-white border-none text-black rounded-lg shadow-inner shadow-slate-600 py-2 px-2 mt-4 font-bold hover:scale-110 hover:bg-slate-200 duration-200 "
             onClick={onClickApprovedModal}
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}

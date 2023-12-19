@@ -66,13 +66,23 @@ const SaleNftCard: FC<IsaleNftCardProps> = ({
   }, [saleNftContract]);
 
   return (
-    <div className="smash text-2xl text-[#d6d6d6] ">
-      <img className="w-[400px] h-[400px]" src={image} alt={name} />
+    <div className="smash text-3xl text-[#d6d6d6] ">
+      <div className="w-[480px] h-[430px] relative mt-12">
+        <img
+          className="z-10 absolute -left-8 bottom-1"
+          src="/images/akjaya.png"
+          alt="akja"
+        />
+        <img className="w-[400px] h-[400px]" src={image} alt={name} />
+      </div>
       <div>{name}</div>
       {registedPrice && (
         <div className="flex gap-4 items-end justify-end">
-          <button>{registedPrice} ETH</button>
-          <button onClick={onClickPurChase} className="hover:text-slate-400">
+          <button className="">{registedPrice} ETH</button>
+          <button
+            onClick={onClickPurChase}
+            className="hover:text-slate-400 hover:scale-110 duration-200"
+          >
             Purchase
           </button>
         </div>

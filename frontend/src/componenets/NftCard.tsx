@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ImyNftCard } from "./MyNftCard";
 import { Link } from "react-router-dom";
 
@@ -9,9 +9,14 @@ const NftCard: FC<InftCard> = ({ image, name, tokenId }) => {
     <Link to={`/detail/${tokenId}`}>
       <div className="pt-4 smash">
         <ul className="">
-          <li className="w-[400px] h-[400px] overflow-hidden  rounded-md">
+          <li className="w-[500px] h-[500px] overflow-hidden rounded-md relative flex items-center justify-center hover:scale-105 duration-200 ">
             <img
-              className="w-[400px] h-[400px] rounded-md hover:scale-110 duration-200"
+              className="absolute w-[480px] h-[480px]  "
+              src="/images/akjaya.png"
+              alt="akja"
+            />
+            <img
+              className="w-[400px] h-[400px]  rounded-md "
               src={image}
               alt={name}
             />

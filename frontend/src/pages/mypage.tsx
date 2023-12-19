@@ -30,13 +30,27 @@ const MyPage: FC = () => {
     observer.current.observe(detectRef.current);
   };
 
-  const getTotalSupply = async () => {
-    try {
-      if (!mintNftContract) return;
-      const totalSupply = await mintNftContract.methods.totalSupply().call();
+  // const getTotalSupply = async () => {
+  //   try {
+  //     if (!mintNftContract) return;
+  //     const totalSupply = await mintNftContract.methods.totalSupply().call();
 
-      setSearchTokenId(Number(totalSupply));
-      setTotalNFT(Number(totalSupply));
+  //     setSearchTokenId(Number(totalSupply));
+  //     setTotalNFT(Number(totalSupply));
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
+  const getBalance = async () => {
+    try {
+      if (!account) return;
+
+      //@ts-expect-error
+      const balance = await mintNftContract.methods.balanceOf(account).call();
+
+      setSearchTokenId(Number(balance));
+      setTotalNFT(Number(balance));
     } catch (error) {
       console.error(error);
     }
@@ -47,6 +61,7 @@ const MyPage: FC = () => {
       if (!mintNftContract || searchTokenId <= 0) return;
       // //@ts-expect-error
       // const balance = await mintNftContract.methods.balanceOf(account).call();
+      // 내 계좌 조회
 
       let temp: NftMetadata[] = [];
 
@@ -83,7 +98,8 @@ const MyPage: FC = () => {
   }, [metadataArray]);
 
   useEffect(() => {
-    getTotalSupply();
+    if (!mintNftContract) return;
+    getBalance();
   }, [mintNftContract]);
 
   const getSaleStatus = async () => {

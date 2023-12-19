@@ -17,7 +17,7 @@ const Header: FC<IheaderProps> = ({ account, setAccount }) => {
   };
 
   return (
-    <div className="bg-[#1a1a1a] w-full flex justify-between  text-2xl py-4 px-8 sticky top-0 shadow-inner shadow-slate-400 rounded-b-lg">
+    <div className="bg-[#1a1a1a] w-full flex justify-between  text-2xl py-4 px-8 sticky top-0 shadow-inner z-20 shadow-slate-400 rounded-b-lg">
       <div className="flex gap-10 text-[#a1a1a1] crang ">
         <Link to="/">Home</Link>
         <Link to="/mypage">MyPage</Link>
